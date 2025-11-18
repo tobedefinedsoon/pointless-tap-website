@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FakeAppSimulator from "./components/FakeAppSimulator";
 
 export default function Home() {
   return (
@@ -118,8 +119,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Screenshots Section */}
+      {/* Interactive Demo Section */}
       <section className="py-24 bg-white dark:bg-[#1C1C1E]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-4">
+              Try It Yourself
+            </h2>
+            <p className="text-xl text-[#8E8E93]">
+              Experience the pointlessness firsthand
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <FakeAppSimulator />
+          </div>
+        </div>
+      </section>
+
+      {/* Screenshots Section */}
+      <section className="py-24 bg-[#F2F2F7] dark:bg-[#1C1C1E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-4">
