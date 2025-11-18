@@ -229,6 +229,14 @@ export default function Home() {
                 className="rounded-lg"
               />
             </div>
+            <div className="flex justify-center gap-6 mb-6 text-sm">
+              <a href="/support" className="hover:text-white transition-colors">
+                Support
+              </a>
+              <a href="/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+            </div>
             <p className="text-sm mb-4">
               Made with questionable life choices
             </p>
