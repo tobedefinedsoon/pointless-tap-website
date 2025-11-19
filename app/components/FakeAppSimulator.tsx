@@ -39,64 +39,80 @@ export default function FakeAppSimulator() {
 
           {/* App Content */}
           <div className="flex-1 bg-[#F2F2F7] dark:bg-[#000000] flex flex-col px-6 pt-4 pb-6">
-            {/* Header with Logo */}
-            <div className="flex flex-col items-center pt-4 pb-4">
-              <Image
-                src="/logo/pointless-tap.png"
-                alt="Pointless Button Logo"
-                width={64}
-                height={64}
-                className="rounded-xl shadow-md mb-3"
-              />
-              <h1 className="text-xl font-black text-gray-900 dark:text-white tracking-tight">
-                Pointless Button
-              </h1>
+            {/* Global Counter at top */}
+            <div className="flex items-center justify-center pt-3 pb-8">
+              <div className="flex flex-col items-center gap-1">
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <span className="text-[10px] font-medium text-[#8E8E93] tracking-[0.15em]">GLOBAL</span>
+                </div>
+                <span className="text-2xl font-bold text-gray-900 dark:text-white opacity-80">
+                  3.2K
+                </span>
+              </div>
+              {/* Trophy icon in top right */}
+              <div className="absolute right-6 top-12">
+                <div className="w-12 h-12 rounded-full bg-[#8E8E93] bg-opacity-20 flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#2C2C2E" className="dark:fill-white">
+                    <path d="M7 3h10c.55 0 1 .45 1 1v5c0 2.76-2.24 5-5 5s-5-2.24-5-5V4c0-.55.45-1 1-1zm5 12c1.64 0 3.09-.81 4-2.05V16c0 .55-.45 1-1 1h-2v3h3c.55 0 1 .45 1 1s-.45 1-1 1H8c-.55 0-1-.45-1-1s.45-1 1-1h3v-3H9c-.55 0-1-.45-1-1v-3.05c.91 1.24 2.36 2.05 4 2.05zM6 5H4c-.55 0-1 .45-1 1v1c0 1.66 1.34 3 3 3V5zm14 0h-2v5c1.66 0 3-1.34 3-3V6c0-.55-.45-1-1-1z"/>
+                  </svg>
+                </div>
+              </div>
             </div>
 
             {/* Counter Display */}
             <div className="flex-1 flex flex-col items-center justify-center">
-              <div className="bg-white dark:bg-[#1C1C1E] rounded-2xl p-6 w-full shadow-sm mb-6">
-                <div className="text-center">
-                  <p className="text-xs font-semibold text-[#8E8E93] mb-1 tracking-wide uppercase">
-                    Your Taps
-                  </p>
-                  <p className="text-5xl font-black text-[#0A84FF] mb-1">
-                    {tapCount.toLocaleString()}
-                  </p>
-                  <p className="text-[10px] text-[#8E8E93]">
-                    (Local only!)
-                  </p>
-                </div>
+              {/* Counter */}
+              <div className="text-center mb-12">
+                <p className="text-6xl font-bold text-gray-900 dark:text-white mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>
+                  {tapCount.toLocaleString()}
+                </p>
+                <p className="text-sm font-medium text-[#8E8E93] tracking-[0.25em]">
+                  TAPS
+                </p>
               </div>
 
               {/* The Button */}
-              <button
-                onClick={handleTap}
-                onMouseDown={() => setIsPressed(true)}
-                onMouseUp={() => setIsPressed(false)}
-                onMouseLeave={() => setIsPressed(false)}
-                onTouchStart={() => setIsPressed(true)}
-                onTouchEnd={() => setIsPressed(false)}
-                className={`
-                  relative w-40 h-40 rounded-full
-                  bg-[#0A84FF]
-                  shadow-lg
-                  transition-all duration-100 ease-out
-                  ${isPressed ? 'scale-95 shadow-md brightness-95' : 'scale-100'}
-                  active:scale-95 active:brightness-95
-                  cursor-pointer
-                `}
-              >
-                <div className="flex items-center justify-center h-full">
-                  <span className="text-3xl font-black text-white select-none">
-                    TAP
-                  </span>
-                </div>
-              </button>
+              <div className="relative">
+                {/* Outer shadow/glow */}
+                <div
+                  className="absolute inset-0 rounded-full bg-[#2C2C2E] dark:bg-[#48484A] opacity-30 blur-2xl"
+                  style={{ width: '220px', height: '220px', left: '-10px', top: '-10px' }}
+                ></div>
 
-              <p className="text-[10px] text-[#8E8E93] mt-4 text-center px-4">
-                Go ahead, tap it. It does nothing but count.
-              </p>
+                {/* Main Button */}
+                <button
+                  onClick={handleTap}
+                  onMouseDown={() => setIsPressed(true)}
+                  onMouseUp={() => setIsPressed(false)}
+                  onMouseLeave={() => setIsPressed(false)}
+                  onTouchStart={() => setIsPressed(true)}
+                  onTouchEnd={() => setIsPressed(false)}
+                  className={`
+                    relative w-[200px] h-[200px] rounded-full
+                    bg-[#2C2C2E] dark:bg-[#48484A]
+                    shadow-lg
+                    transition-transform duration-300 ease-out
+                    ${isPressed ? 'scale-95' : 'scale-100'}
+                    cursor-pointer
+                    flex items-center justify-center
+                  `}
+                  style={{
+                    boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)'
+                  }}
+                >
+                  {/* Hand pointing icon */}
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    className="select-none"
+                  >
+                    <path d="M8.5 14.5v-5c0-.55.45-1 1-1s1 .45 1 1v5c0 .55-.45 1-1 1s-1-.45-1-1zm-2-1v-6c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1zm-2-2v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1s-1-.45-1-1zm13.5 3.5c0 1.93-1.57 3.5-3.5 3.5h-2.17c-.53 0-1.04-.21-1.42-.59L6.59 13.59c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l2 2V7c0-.55.45-1 1-1s1 .45 1 1v5h.5c.28 0 .5.22.5.5s-.22.5-.5.5h-.5v1h.5c.28 0 .5.22.5.5s-.22.5-.5.5h-.5v1h1.5c.28 0 .5.22.5.5s-.22.5-.5.5H12v.5c0 .28.22.5.5.5h1.5c1.38 0 2.5-1.12 2.5-2.5v-3c0-.55.45-1 1-1s1 .45 1 1v3z"/>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
