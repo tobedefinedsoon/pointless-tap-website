@@ -29,10 +29,12 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="#download"
+              href="https://apps.apple.com/us/app/pointless-tap/id6755431610"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-[#2C2C2E] dark:bg-[#48484A] rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[0.98] active:scale-95"
             >
-              Coming Soon to App Store
+              Download on App Store
             </a>
             <a
               href="#features"
@@ -224,11 +226,16 @@ export default function Home() {
             Ready to Waste Some Time?
           </h2>
           <p className="text-xl mb-10 text-[#8E8E93]">
-            Join the pointless revolution. Download the app when it launches.
+            Join the pointless revolution and start tapping now!
           </p>
-          <div className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-gray-900 bg-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-200 hover:scale-[0.98] cursor-not-allowed">
-            Coming Soon to the App Store
-          </div>
+          <a
+            href="https://apps.apple.com/us/app/pointless-tap/id6755431610"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-gray-900 bg-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-200 hover:scale-[0.98] cursor-pointer"
+          >
+            Download on App Store
+          </a>
           <p className="mt-8 text-sm text-[#8E8E93]">
             iOS 17.0 or later required
           </p>
