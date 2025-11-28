@@ -31,6 +31,9 @@ export default function Privacy() {
               <Link href="/support" className="text-gray-600 hover:text-gray-900 font-medium">
                 Support
               </Link>
+              <Link href="/terms" className="text-gray-600 hover:text-gray-900 font-medium">
+                Terms
+              </Link>
             </nav>
           </div>
         </div>
@@ -50,7 +53,7 @@ export default function Privacy() {
               Your privacy matters, even when tapping pointlessly.
             </p>
             <p className="text-sm text-gray-500 mt-4">
-              Last Updated: November 25, 2025
+              Last Updated: November 28, 2025
             </p>
           </div>
 
@@ -278,20 +281,49 @@ export default function Privacy() {
             {/* In-App Purchases */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">In-App Purchases</h2>
-              <p className="text-gray-700 leading-relaxed">
-                The app offers optional in-app purchases for cosmetic achievements and badges.
-                These transactions are processed entirely through Apple&apos;s App Store, and we do not
-                collect or store your payment information. Please refer to{" "}
-                <a
-                  href="https://www.apple.com/legal/privacy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-700 font-semibold underline"
-                >
-                  Apple&apos;s Privacy Policy
-                </a>
-                {" "}for information about how Apple handles payment data.
-              </p>
+              <div className="space-y-4">
+                <p className="text-gray-700 leading-relaxed">
+                  The app offers an optional in-app purchase to remove all advertisements:
+                </p>
+
+                <div className="bg-orange-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <span>🚫</span>
+                    Remove Ads ($1.99 USD)
+                  </h3>
+                  <p className="text-gray-700 mb-3">
+                    This is a one-time, non-consumable purchase that permanently removes all banner and
+                    video ads from the app. Benefits include:
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                    <li>No banner ads displayed on the main screen</li>
+                    <li>No video ads required for the 2x tap multiplier</li>
+                    <li>Instant access to the 2x multiplier (every 5 minutes)</li>
+                    <li>Purchase syncs across your devices via iCloud</li>
+                    <li>Restore purchases option available in settings</li>
+                  </ul>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed">
+                  All in-app purchase transactions are processed entirely through Apple&apos;s App Store.
+                  We do not collect, process, or store your payment information. Apple handles all
+                  payment processing securely. Your purchase is tied to your Apple ID and can be
+                  restored on any device you own.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed">
+                  For information about how Apple handles payment data and purchase records, please refer to{" "}
+                  <a
+                    href="https://www.apple.com/legal/privacy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 font-semibold underline"
+                  >
+                    Apple&apos;s Privacy Policy
+                  </a>
+                  .
+                </p>
+              </div>
             </section>
 
             {/* Firebase & Cloud Services */}
@@ -421,6 +453,9 @@ export default function Privacy() {
               </Link>
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-white transition-colors">
+                Terms of Service
               </Link>
             </div>
             <p className="text-sm mb-4">

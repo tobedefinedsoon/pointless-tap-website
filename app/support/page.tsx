@@ -43,6 +43,9 @@ export default function Support() {
               <Link href="/privacy" className="text-gray-600 hover:text-gray-900 font-medium">
                 Privacy
               </Link>
+              <Link href="/terms" className="text-gray-600 hover:text-gray-900 font-medium">
+                Terms
+              </Link>
             </nav>
           </div>
         </div>
@@ -149,6 +152,9 @@ export default function Support() {
               </Link>
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-white transition-colors">
+                Terms of Service
               </Link>
             </div>
             <p className="text-sm mb-4">
