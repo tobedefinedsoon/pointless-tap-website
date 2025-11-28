@@ -50,7 +50,7 @@ export default function Privacy() {
               Your privacy matters, even when tapping pointlessly.
             </p>
             <p className="text-sm text-gray-500 mt-4">
-              Last Updated: November 18, 2025
+              Last Updated: November 25, 2025
             </p>
           </div>
 
@@ -101,6 +101,26 @@ export default function Privacy() {
                     accessible to us.
                   </p>
                 </div>
+
+                <div className="bg-yellow-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <span>📱</span>
+                    Advertising Data
+                  </h3>
+                  <p className="text-gray-700 mb-3">
+                    We display ads through Google AdMob to support the app. AdMob may collect and process data including:
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                    <li>Device identifiers (IDFA/advertising ID, if you&apos;ve granted permission)</li>
+                    <li>IP address and general location (country/region level)</li>
+                    <li>Ad interaction data (views, clicks)</li>
+                    <li>Device type, OS version, and app information</li>
+                  </ul>
+                  <p className="text-gray-700 mt-3">
+                    You can control ad personalization through iOS Settings → Privacy & Security → Tracking,
+                    or opt out of personalized ads in iOS Settings → Privacy & Security → Apple Advertising.
+                  </p>
+                </div>
               </div>
             </section>
 
@@ -123,9 +143,88 @@ export default function Privacy() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-xl">❌</span>
-                    <span><strong>No Third-Party Tracking:</strong> We do not use third-party advertising networks or tracking tools.</span>
+                    <span><strong>No Direct Tracking by Us:</strong> We do not directly track or profile you. While we use Google AdMob for ads, we do not receive or store your personal advertising data.</span>
                   </li>
                 </ul>
+              </div>
+            </section>
+
+            {/* Advertising & Monetization */}
+            <section>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Advertising & Monetization</h2>
+              <div className="space-y-4">
+                <div className="bg-blue-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <span>📺</span>
+                    Google AdMob
+                  </h3>
+                  <p className="text-gray-700 mb-3">
+                    We use Google AdMob to display banner ads and rewarded video ads. AdMob is a third-party
+                    advertising platform that may collect data to serve personalized ads. This includes:
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                    <li>Device and advertising identifiers</li>
+                    <li>Ad performance and interaction metrics</li>
+                    <li>Approximate location (derived from IP address)</li>
+                  </ul>
+                  <p className="text-gray-700 mt-3">
+                    For complete details about AdMob&apos;s data practices, please review{" "}
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700 font-semibold underline"
+                    >
+                      Google&apos;s Privacy Policy
+                    </a>
+                    {" "}and{" "}
+                    <a
+                      href="https://support.google.com/admob/answer/6128543"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700 font-semibold underline"
+                    >
+                      AdMob&apos;s Privacy Information
+                    </a>
+                    .
+                  </p>
+                </div>
+
+                <div className="bg-purple-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <span>🎬</span>
+                    Rewarded Video Ads
+                  </h3>
+                  <p className="text-gray-700">
+                    You can optionally watch video ads to receive a temporary 2x tap multiplier. These ads
+                    are completely voluntary - you never have to watch ads to use the core app functionality.
+                    Watching ads supports the development and maintenance of the app.
+                  </p>
+                </div>
+
+                <div className="bg-green-50 p-6 rounded-xl">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <span>⚙️</span>
+                    Control Your Ad Experience
+                  </h3>
+                  <p className="text-gray-700 mb-3">
+                    You have control over ad personalization:
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                    <li>
+                      <strong>iOS 14.5+:</strong> When you first launch the app, iOS will ask for permission
+                      to track you across apps and websites. Denying this limits ad personalization.
+                    </li>
+                    <li>
+                      <strong>Limit Ad Tracking:</strong> Go to iOS Settings → Privacy & Security → Tracking
+                      and disable &quot;Allow Apps to Request to Track&quot;
+                    </li>
+                    <li>
+                      <strong>Reset Advertising Identifier:</strong> Go to iOS Settings → Privacy & Security
+                      → Apple Advertising → Reset Advertising Identifier
+                    </li>
+                  </ul>
+                </div>
               </div>
             </section>
 
@@ -148,12 +247,30 @@ export default function Privacy() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Data Sharing and Sales</h2>
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-200">
                 <p className="text-lg font-bold text-gray-900 mb-3">
-                  🛡️ We do NOT sell, rent, or share your data with third parties. Period.
+                  🛡️ We do NOT sell your personal data. Period.
                 </p>
-                <p className="text-gray-700">
-                  Your data is not a commodity. We do not monetize your information through data sales
-                  or sharing arrangements with advertisers, data brokers, or any other third parties.
-                  The only revenue we generate comes from optional in-app purchases for cosmetic achievements.
+                <p className="text-gray-700 mb-3">
+                  Your data is not a commodity. We do not sell your personal information to data brokers
+                  or other third parties. However, please be aware:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  <li>
+                    <strong>Advertising Partners:</strong> Google AdMob (our advertising provider) collects
+                    data about your device and ad interactions to serve ads and measure their effectiveness.
+                    This data is governed by Google&apos;s privacy policy, not ours.
+                  </li>
+                  <li>
+                    <strong>Firebase:</strong> We use Firebase (Google&apos;s cloud platform) for the global
+                    tap counter and analytics. Firebase processes data according to their privacy practices.
+                  </li>
+                  <li>
+                    <strong>Apple:</strong> In-app purchases are processed by Apple&apos;s App Store, which
+                    handles payment information according to Apple&apos;s privacy policy.
+                  </li>
+                </ul>
+                <p className="text-gray-700 mt-3">
+                  Revenue is generated through ad impressions and optional in-app purchases, not by selling
+                  your personal information.
                 </p>
               </div>
             </section>
@@ -258,19 +375,23 @@ export default function Privacy() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lg">✅</span>
-                  <span>We do NOT collect personal information</span>
+                  <span>We do NOT collect or store your personal information</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lg">✅</span>
-                  <span>We do NOT sell or share your data</span>
+                  <span>We do NOT sell your personal data</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lg">✅</span>
                   <span>Your tap count and achievements stay on your device (and iCloud if enabled)</span>
                 </li>
                 <li className="flex items-start gap-3">
+                  <span className="text-lg">📺</span>
+                  <span>We use Google AdMob for ads - you can control ad tracking in iOS settings</span>
+                </li>
+                <li className="flex items-start gap-3">
                   <span className="text-lg">✅</span>
-                  <span>We&apos;re committed to keeping your pointless tapping private and secure</span>
+                  <span>We&apos;re committed to transparency about data practices and third-party services</span>
                 </li>
               </ul>
             </section>
