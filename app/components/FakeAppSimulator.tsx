@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { FaHandPointUp } from 'react-icons/fa';
 
 export default function FakeAppSimulator() {
   const [tapCount, setTapCount] = useState(1245);
@@ -101,16 +102,8 @@ export default function FakeAppSimulator() {
                     boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)'
                   }}
                 >
-                  {/* Hand pointing icon */}
-                  <svg
-                    width="80"
-                    height="80"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                    className="select-none"
-                  >
-                    <path d="M8.5 14.5v-5c0-.55.45-1 1-1s1 .45 1 1v5c0 .55-.45 1-1 1s-1-.45-1-1zm-2-1v-6c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1zm-2-2v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1s-1-.45-1-1zm13.5 3.5c0 1.93-1.57 3.5-3.5 3.5h-2.17c-.53 0-1.04-.21-1.42-.59L6.59 13.59c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l2 2V7c0-.55.45-1 1-1s1 .45 1 1v5h.5c.28 0 .5.22.5.5s-.22.5-.5.5h-.5v1h.5c.28 0 .5.22.5.5s-.22.5-.5.5h-.5v1h1.5c.28 0 .5.22.5.5s-.22.5-.5.5H12v.5c0 .28.22.5.5.5h1.5c1.38 0 2.5-1.12 2.5-2.5v-3c0-.55.45-1 1-1s1 .45 1 1v3z"/>
-                  </svg>
+                  {/* Hand pointing icon - matches iOS app */}
+                  <FaHandPointUp className="text-white text-[80px] select-none" />
                 </button>
               </div>
             </div>
