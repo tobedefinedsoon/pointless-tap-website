@@ -79,7 +79,7 @@ export default function Home() {
             <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">The Button</h3>
               <p className="text-[#8E8E93]">
-                A big, beautiful, completely pointless button. Tap it. That&apos;s it.
+                A big, beautiful, completely pointless 200x200 button with spring animations. Tap it. That&apos;s it.
               </p>
             </div>
 
@@ -91,30 +91,51 @@ export default function Home() {
             </div>
 
             <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Achievements</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">33 Achievements</h3>
               <p className="text-[#8E8E93]">
-                Unlock badges that prove you&apos;ve wasted your time. Some you can even pay for!
+                Unlock badges from &quot;First Tap&quot; to absurd milestones. Beautiful toast notifications celebrate your wasted time.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Speed Challenge</h3>
+              <p className="text-[#8E8E93]">
+                30-second tapping sprints with live metrics. Track your current, average, and peak taps per second.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Global Leaderboard</h3>
+              <p className="text-[#8E8E93]">
+                Compete with tappers worldwide. See top 100 players and track your rank with auto-generated usernames.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">2X Multiplier</h3>
+              <p className="text-[#8E8E93]">
+                Watch ads to double your taps for 30 seconds. Or buy Remove Ads for unlimited direct access.
               </p>
             </div>
 
             <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Haptic Feedback</h3>
               <p className="text-[#8E8E93]">
-                Feel every single pointless tap with satisfying haptic feedback.
+                Feel every single pointless tap with satisfying haptic feedback and spring animations.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Usernames</h3>
+              <p className="text-[#8E8E93]">
+                Auto-generated creative names like &quot;swift_panda_472&quot; or customize your own tapper identity.
               </p>
             </div>
 
             <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Easter Eggs</h3>
               <p className="text-[#8E8E93]">
-                Discover special animations at ridiculous milestone numbers.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-[#2C2C2E] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#8E8E93]/10">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Personal Stats</h3>
-              <p className="text-[#8E8E93]">
-                Track exactly how much time you&apos;ve wasted down to the tap.
+                Discover special animations at ridiculous milestone numbers as you tap your way to infinity.
               </p>
             </div>
           </div>
@@ -147,26 +168,44 @@ export default function Home() {
               See It In Action
             </h2>
             <p className="text-xl text-[#8E8E93]">
-              Witness the pointlessness
+              Witness the pointlessness in all its glory
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
             <div className="relative">
               <Image
-                src="/screenshots/Simulator Screenshot - iPhone 17 Pro Max - 2025-11-18 at 17.00.25.png"
-                alt="Pointless Button App Screenshot 1"
-                width={300}
-                height={650}
+                src="/screenshots/home.png"
+                alt="Main tapping screen with global counter"
+                width={280}
+                height={606}
                 className="rounded-3xl shadow-2xl"
               />
             </div>
             <div className="relative">
               <Image
-                src="/screenshots/Simulator Screenshot - iPhone 17 Pro Max - 2025-11-18 at 17.00.32.png"
-                alt="Pointless Button App Screenshot 2"
-                width={300}
-                height={650}
+                src="/screenshots/leaderboard.png"
+                alt="Global leaderboard with top players"
+                width={280}
+                height={606}
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src="/screenshots/achievements.png"
+                alt="Achievement list with progress tracking"
+                width={280}
+                height={606}
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src="/screenshots/speed-challenge.png"
+                alt="Speed challenge mode with live metrics"
+                width={280}
+                height={606}
                 className="rounded-3xl shadow-2xl"
               />
             </div>
@@ -209,10 +248,10 @@ export default function Home() {
 
             <div className="bg-white dark:bg-[#2C2C2E] p-6 rounded-2xl border border-[#8E8E93]/10">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Can I get a refund for achievement purchases?
+                Can I get a refund for the Remove Ads purchase?
               </h3>
               <p className="text-[#8E8E93]">
-                Yes, through Apple&apos;s standard refund process. But why would you want to?
+                Yes, through Apple&apos;s standard refund process. But those ads were pretty unobtrusive...
               </p>
             </div>
           </div>

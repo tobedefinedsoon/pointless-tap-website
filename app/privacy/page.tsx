@@ -263,10 +263,6 @@ export default function Privacy() {
                     This data is governed by Google&apos;s privacy policy, not ours.
                   </li>
                   <li>
-                    <strong>Firebase:</strong> We use Firebase (Google&apos;s cloud platform) for the global
-                    tap counter and analytics. Firebase processes data according to their privacy practices.
-                  </li>
-                  <li>
                     <strong>Apple:</strong> In-app purchases are processed by Apple&apos;s App Store, which
                     handles payment information according to Apple&apos;s privacy policy.
                   </li>
@@ -324,26 +320,6 @@ export default function Privacy() {
                   .
                 </p>
               </div>
-            </section>
-
-            {/* Firebase & Cloud Services */}
-            <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Firebase & Cloud Services</h2>
-              <p className="text-gray-700 leading-relaxed">
-                We use Firebase (Google&apos;s cloud platform) to power the global tap counter and sync
-                anonymous aggregate data. Firebase may collect technical information such as IP addresses
-                for service operation, but this data is not used for tracking or profiling individual users.
-                For more information, see{" "}
-                <a
-                  href="https://firebase.google.com/support/privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-700 font-semibold underline"
-                >
-                  Firebase&apos;s Privacy Policy
-                </a>
-                .
-              </p>
             </section>
 
             {/* Children's Privacy */}
