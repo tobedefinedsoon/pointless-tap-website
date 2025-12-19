@@ -114,7 +114,7 @@ export default function FakeAppSimulator() {
       {/* Info Text */}
       <div className="text-center max-w-md px-4">
         <p className="text-sm text-[#8E8E93]">
-          ✨ Try the interactive demo! Your taps stay local and don&apos;t affect the real Firebase counter.
+          ✨ Try the interactive demo! Your taps stay local and don&apos;t affect the global counter.
         </p>
       </div>
     </div>
