@@ -172,38 +172,49 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
-            <div className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+            {/* Screenshot 1: Home */}
+            <div className="relative max-w-[280px]">
+              <div className="absolute top-6 left-0 right-0 z-10 px-6">
+                <h3 className="text-2xl font-black text-white text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                  Tap. Count. Compete.
+                </h3>
+              </div>
               <Image
                 src="/screenshots/home.png"
-                alt="Main tapping screen with global counter"
+                alt="Main tapping screen with global counter and 2X multiplier"
                 width={280}
                 height={606}
                 className="rounded-3xl shadow-2xl"
               />
             </div>
-            <div className="relative">
-              <Image
-                src="/screenshots/leaderboard.png"
-                alt="Global leaderboard with top players"
-                width={280}
-                height={606}
-                className="rounded-3xl shadow-2xl"
-              />
-            </div>
-            <div className="relative">
-              <Image
-                src="/screenshots/achievements.png"
-                alt="Achievement list with progress tracking"
-                width={280}
-                height={606}
-                className="rounded-3xl shadow-2xl"
-              />
-            </div>
-            <div className="relative">
+
+            {/* Screenshot 2: Speed Challenge */}
+            <div className="relative max-w-[280px]">
+              <div className="absolute top-6 left-0 right-0 z-10 px-6">
+                <h3 className="text-2xl font-black text-white text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                  Beat Your Best Time
+                </h3>
+              </div>
               <Image
                 src="/screenshots/speed-challenge.png"
-                alt="Speed challenge mode with live metrics"
+                alt="Speed challenge mode with timer and performance metrics"
+                width={280}
+                height={606}
+                className="rounded-3xl shadow-2xl"
+              />
+            </div>
+
+            {/* Screenshot 3: Leaderboard */}
+            <div className="relative max-w-[280px]">
+              <div className="absolute top-6 left-0 right-0 z-10 px-6">
+                <h3 className="text-2xl font-black text-white text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                  Climb the Global Ranks
+                </h3>
+              </div>
+              <Image
+                src="/screenshots/leaderboard.png"
+                alt="Global leaderboard with top players and rankings"
                 width={280}
                 height={606}
                 className="rounded-3xl shadow-2xl"
